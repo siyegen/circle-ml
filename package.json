@@ -1,0 +1,9 @@
+{
+  "name": "HTML_Stats",
+  "version": "0.0.1",
+  "dependencies": {
+    "restler": "*",
+    "jsdom": "*",
+    "jQuery": "*"
+  }
+}
