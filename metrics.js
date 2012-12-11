@@ -3,6 +3,7 @@ var jsdom = require('jsdom');
 var fs = require('fs');
 var jquery = fs.readFileSync('./jquery-1.7.2.min.js').toString();
 var sites = ['stackoverflow.com', 'google.com', 'sendgrid.com', 'github.com', 'arstechnica.com'];
+//var sites = ['stackoverflow.com'];
 var url = require('url');
 
 function process_sites(items, callback) {
@@ -47,11 +48,17 @@ function log_data(data, site) {
         }
       });
       keys.sort();
+      var formatted_results = [];
 
       console.log("site: " + site);
       keys.forEach(function(key) {
-          console.log("\t%s: %s", key, element_count[key]);
+        var obj = {};
+        obj.element = key;
+        obj.count = element_count[key];
+        formatted_results.push(obj);
+        console.log("\t%s: %s", key, element_count[key]);
       });
+      console.log(JSON.stringify(formatted_results));
     }
   });
 }
