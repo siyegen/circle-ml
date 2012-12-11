@@ -1,9 +1,20 @@
 {
-  "name": "HTML_Stats",
+  "name": "Circle-ML",
+  "description": "Drawing DOM as circles, with D3",
   "version": "0.0.1",
+  "private": true,
   "dependencies": {
-    "restler": "*",
-    "jsdom": "*",
-    "jQuery": "*"
+    "restler": "2.0.1",
+    "jsdom": "0.2.14",
+    "express": "3.0",
+    "jade": "0.27.2",
+    "connect-flash": "0.1.0"
+  },
+  "scripts": {
+    "start": "server.js"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
   }
 }
